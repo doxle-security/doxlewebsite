@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Doxle Security</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />	
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Armor Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+<body>
+<div class="header">
+</div>
+<div class="header-top">
+	<div class="container">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.png" alt=""></a>
+		</div>
+		<div class="top-nav">
+				<span class="menu"><img src="images/menu.png" alt="">  </span>
+					<ul >
+						<li ><a href="index.html" >Home </a></li>
+						<li><a href="about.html" >About </a></li>
+						<li><a href="careers.html" >Careers</a></li>						
+                                                <li><a href="contact.html" >Contact</a></li>
+					</ul>
+					<script>
+						$("span.menu").click(function(){
+							$(".top-nav ul").slideToggle(500, function(){
+							});
+						});
+					</script>
+				</div>	
+<div class="clearfix"></div>				
+	</div>
+</div>
+<!--//header-->
+
+	
+	<div class="contact">
+		<div class="container">
+	
+            <div class="top-content">
+				<h1>Careers</h1>
+                                
+<!--					<div class="contact-form">
+				<div class="col-md-8 contact-grid">
+					<form  method="post" action="contactproc.jsp">	
+						<input type="text" value="Name" name="name" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Name';}">
+						<input type="text" value="Email" name="email" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Email';}">
+						<input type="text" value="Subject" name="subject" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='Subject';}">
+						
+						<textarea cols="77" rows="6" name="message" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+						<div class="send">
+							<input type="submit" value="Send">
+						</div>
+					</form>
+				</div>
+		</div>-->
+			
+                                	<!--<div class="col-md-4 contact-in">-->
+<!--						<div class="map">
+</div> -->
+						<div class="careers">
+ <p>We are constantly hiring guards to support our services to our clients, if you feel motivated to be part of our team at Doxle Security please send us your <b>CV,</b> <b> COA,</b> and<b> Copy of your work rights (visa/citizenship status)</b> at <a href="mailto:careers@doxlesecurity.com">careers@doxlesecurity.com</a></p>
+                                                     
+<form name="career-form" method="post" action="" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="text" name="firstname" class="form-control" value="firstname" placeholder="Name" required="">
+    </div>
+    <div class="form-group">
+        <input type="text" name="lastname" class="form-control" value="firstname" placeholder="Name" required="">
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" class="form-control" value="email" placeholder="Email address" required="">
+    </div>
+    <div class="form-group">
+        <input type="text" name="phone" class="form-control" value="phone" placeholder="Subject" required="">
+    </div>
+    <div class="form-group">
+        <input type="file" name="attachment" class="form-control">
+    </div>
+    <div class="submit">
+        <input type="submit" name="submit" class="btn" value="SUBMIT">
+    </div>
+</form>
+<div class="response_msg"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#career-form").on("submit",function(e){
+e.preventDefault();
+if($("#contact-form [firstname='your_firstname']").val() === '')
+{
+$("#contact-form [firstname='your_firstname']").css("border","1px solid red");
+}
+else if($("#contact-form [lastname='your_lastname']").val() === '')
+{
+$("#contact-form [lastname='your_lastname']").css("border","1px solid red");
+}
+else if ($("#contact-form [email='your_email']").val() === '')
+{
+$("#contact-form [email='your_email']").css("border","1px solid red");
+}
+else if ($("#contact-form [phone='your_phone']").val() === '')
+{
+$("#contact-form [phone='your_phone']").css("border","1px solid red");
+}
+else if ($("#contact-form [attactment='file']").val() < 0)
+{
+$("#contact-form [attachment='file']").css("border","1px solid red");
+}
+else
+{
+var sendData = $( this ).serialize();
+$.ajax({
+type: "POST",
+url: "get_response_1.php",
+data: sendData,
+success: function(data){
+$("#loading-img").css("display","none");
+$(".response_msg").text(data);
+$(".response_msg").slideDown().fadeOut(3000);
+$("#contact-form").find("input[type=text], input[type=email], textarea").val("");
+}
+});
+}
+});
+$("#contact-form input").blur(function(){
+var checkValue = $(this).val();
+if(checkValue != '')
+{
+$(this).css("border","1px solid #eeeeee");
+}
+});
+});
+</script>
+       			</div>
+					
+				<!--</div>-->
+				
+				
+				<div class="clearfix"> </div>
+			</div>
+			
+		</div>
+
+		
+<div class="footer">
+			<div class="container">
+				<div class="footer-top">
+					 
+                                         <p class="footer-in">Building Trust</p>
+					<ul class="social">
+						<li><a href="https://www.facebook.com/doxlenz"><i> </i></a></li>						
+						<li><a href="https://www.twitter.com/doxlesecurity"><i class="twitter"> </i></a></li>
+						<li><a href="https://www.linkedin.com/company/doxle-security"><i class="linked"> </i></a></li>
+						<li><a href="https://www.instagram.com/doxlesecurity"><i class="camera"> </i></a></li>
+					</ul>
+                                         <p class="footer-class"> © 2019 Doxle Security All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+				</div>
+			</div>
+		</div>
+		<!--//footer-->
+        </body>
+</html>
